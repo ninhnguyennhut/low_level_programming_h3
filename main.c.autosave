@@ -55,7 +55,7 @@ int main() {
 
 	gpio_base = (char *)pc + addr_offset;
 
-	gpio_base_testing = (unsigned int *)pc + (unsigned int)addr_offset;
+	gpio_base_testing = (unsigned int *)pc + addr_offset;
 
 	printf("GPIO BASE PC1 -> %08X\n", addr_offset);
 	printf("GPIO BASE PC2 -> %08X\n", addr_offset);

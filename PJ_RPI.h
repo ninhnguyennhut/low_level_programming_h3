@@ -64,6 +64,16 @@ extern struct h3_peripheral spi1;	// so use extern!!
 #define PA_PULL0_REG	*(gpio.addr + 0x1C)
 #define PA_PULL1_REG	*(gpio.addr + 0x20)
 
+#define PE_CFG0_REG			*(gpio.addr +0x90)
+#define PE_CFG1_REG			*(gpio.addr +0x94)
+#define PE_CFG2_REG			*(gpio.addr +0x98)
+#define PE_CFG3_REG			*(gpio.addr +0x9C)
+#define PE_DATA_REG			*(gpio.addr +0xA0)
+#define PE_DRV0_REG			*(gpio.addr +0xA4)
+#define PE_DRV1_REG			*(gpio.addr +0xA8)
+#define PE_PULL0_REG		*(gpio.addr +0xAC)
+#define PE_PULL1_REG		*(gpio.addr +0xB0)
+
 /* spi1 addr off */
 
 #define SPI_GCR		*(spi1.addr + 0x04	)		// SPI Global Control Register

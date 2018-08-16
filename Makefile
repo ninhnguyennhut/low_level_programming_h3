@@ -1,6 +1,6 @@
 
 
-NAME_MODULE	= h3_spi
+NAME_MODULE	= fanning_spi
 
 CXXFLAGS	+= -I./
 CFLAGS	+= -I./
@@ -34,8 +34,7 @@ $(OBJ_DIR)/$(NAME_MODULE): $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LDFLAGS) $(LDLIBS)
 
 copy:
-	sshpass -p "Xk4S/n" scp $(OBJ_DIR)/$(NAME_MODULE) device@192.168.168.138:/home/device/fpt_gateway/fanning_test
-	sshpass -p "Xk4S/n" scp -r * device@192.168.168.138:/home/device/fpt_gateway/fanning_test_source
+	sshpass -p "mttnttpkl" scp -r * root@192.168.1.7:/home/workspace/spi
 
 log:
 	sshpass -p "Xk4S/n" ssh device@192.168.168.138
@@ -43,6 +42,9 @@ log:
 clean:
 	@echo rm -rf $(OBJ_DIR)
 	@rm -rf $(OBJ_DIR)
+
+flash:
+	@sudo $(OBJ_DIR)/$(NAME_MODULE)
 
 flash2 :
 	${CC} ${LDFLAGS} -c -Wall -Werror -fpic PJ_RPI.c

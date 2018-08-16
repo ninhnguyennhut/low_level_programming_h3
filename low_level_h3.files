@@ -1,4 +1,5 @@
 helloworld.c
+LICENSE
 main.c
 Makefile
 mpu.c
