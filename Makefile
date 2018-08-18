@@ -1,5 +1,3 @@
-
-
 NAME_MODULE	= fanning_spi
 
 CXXFLAGS	+= -I./
@@ -45,10 +43,3 @@ clean:
 
 flash:
 	@sudo $(OBJ_DIR)/$(NAME_MODULE)
-
-flash2 :
-	${CC} ${LDFLAGS} -c -Wall -Werror -fpic PJ_RPI.c
-	${CC} ${LDFLAGS} -shared -o libfanning.so PJ_RPI.o
-	${CC} ${LDFLAGS} -c main.c
-	${CC} ${LDFLAGS} -o program -L. main.o -lfanning
-	${CC} ${LDFLAGS} -o test test.c

@@ -43,11 +43,7 @@ int map_peripheral(struct h3_peripheral *p) {
 		return -1;
 	}
 
-	printf("addr is maped          -> 0x%08X\n", (volatile unsigned int *)p->map);
-
 	p->addr = (unsigned int *)p->map + addr_offset;
-
-	printf("addr is maped + offset -> 0x%08X\n", p->addr);
 
 	return 0;
 }
